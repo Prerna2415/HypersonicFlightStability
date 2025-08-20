@@ -17,4 +17,4 @@ model.learn(total_timesteps=100000)
 # 5. Save trained model
 model.save("../models/hypersonic_ppo_agent")
 
-print("✅ Training complete, model saved in ../models/")
+print("Training complete, model saved in ../models/")
