@@ -84,10 +84,10 @@ class HypersonicEnv(gym.Env):
         if seed is not None:
             np.random.seed(seed)
 
-        self.fdm.set('ic/h-sl-ft', 70000)
-        self.fdm.set('ic/mach', 5.0)
-        self.fdm.set('ic/psi-true-deg', 0)
-        self.fdm.set('ic/phi-deg', np.random.uniform(-5, 5))
+        self.fdm['ic/h-sl-ft'] = 70000
+        self.fdm['ic/mach'] = 5.0
+        self.fdm['ic/psi-true-deg'] = 0
+        self.fdm['ic/phi-deg'] = np.random.uniform(-5, 5)
         self.fdm.run_ic()
 
         for prop in self.control_properties:
